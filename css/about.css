@@ -1,0 +1,159 @@
+/* ///////////////////////////Achievement Section/////////////// */
+:root{
+    --color-primary:#6c63ff;
+    --color-success:#00bf8e;
+    --color-warning:#f7c94b;
+    --color-danger:#f75842;
+    --color-danger-variant:rgba(247, 88, 66, 0.4);
+    --color-white:#fff;
+    --color-light:rgba(255, 255, 255, 0.7);
+    --color-black:#000;
+    --color-bg:#1f2641;
+    --color-bg1:#2e3267;
+    --color-bg2:#424890;
+
+   
+
+}
+
+
+
+.about_achievements {
+    margin-top: 3rem;
+}
+.about_achievements-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap:5rem ;
+}
+.about_achievements-left{
+    width: 35rem;
+    margin-left: -90px;
+}
+.about_achievements-right{
+    margin: 1.6rem 0 2.5rem;
+}
+.achievement_cards{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 1.5rem;
+}
+.achievement_card{
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.achievement_card:hover{
+    background: var(--color-bg2);
+    box-shadow:0 3rem 3rem rgba(0, 0, 0, 0.3);
+
+}
+.achievement_card p{
+    margin-top: 1rem;
+}
+
+/* =================team ============== */
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rbga(0, 0, 0, 0.5);
+
+}
+.team_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.team_member{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    overflow: hidden;
+}
+.team_member:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+
+}
+.team_member-image img{
+    filter: saturate(0);
+}
+.team_member:hover img{
+    filter: saturate(1);
+}
+.team_member-info * {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+.team_member-info h4{
+    font-size: 1rem;
+}
+.team_member-info p{
+    color: var(--color-light);
+}
+.team_member-socials{
+    position: absolute;
+    display: flex;
+   margin-left: 0.1rem;
+   margin-top: -0.1rem;
+    float: left;
+    /* flex-direction: row;   */
+    background: var(--color-bg2);
+    border-radius: 1rem 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.team_member:hover .team_member-socials{
+   background-color: var(--color-success);
+   
+    display: block;
+}
+.team_member-socials a {
+    
+    padding: 1rem;
+
+}
+
+
+/* /////////////////////media queries/////////////////////// */
+@media screen and(max-width: 1024px) {
+    .about_achievements{
+        margin-top: 2rem;
+    }
+    .about_achievements-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .about_achievements-left{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .team_container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .team_member{
+        padding: 1rem;
+    }
+}
+/* ///////////////////////////////media queries for phone////////////////// */
+@media screen and (max-width:600px) {
+    .achievement_cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+
+    }
+    .team_member{
+        padding: 0;
+    }
+    .team_member p{
+        margin-bottom: 1.5rem;
+    }
+    
+}
