@@ -26,7 +26,7 @@ faqs.forEach(faq => {
 
 
 
-///// show/hide nav menu ///
+///// show/hide nav menu //////
 const menu = document.querySelector(".nav_menu");
 const menuBtn = document.querySelector("#open-menu-btn");
 const closeBtn = document.querySelector("#close-menu-btn");
